@@ -11,4 +11,9 @@ public class KillZone : MonoBehaviour
         if (collision.gameObject.GetComponent<Hero>())
             isTouchKillZoneEvent?.Invoke();
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<Hero>())
+            isTouchKillZoneEvent?.Invoke();
+    }
 }

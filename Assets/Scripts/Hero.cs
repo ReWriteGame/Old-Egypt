@@ -30,4 +30,14 @@ public class Hero : MonoBehaviour
         if (collision.gameObject.GetComponent<Ground>())
             move.CanJump = false;
     }
+
+
+   
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<Enemy>())
+            isTouchEnemyEvent?.Invoke();
+    }
+   
 }
